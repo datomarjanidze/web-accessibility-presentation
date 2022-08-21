@@ -1,0 +1,11 @@
+app-accessibility-example-container[exampleType="good-example"] {
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .last-name {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

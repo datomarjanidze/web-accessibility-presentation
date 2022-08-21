@@ -1,0 +1,93 @@
+<h1 class="title">Keyboard Navigation</h1>
+
+<section class="examples-container">
+  <app-accessibility-example-container exampleType="bad-example">
+    <section class="code">
+      &lt;button tabindex="-1"&gt;tab is disabled&lt;/button&gt;
+    </section>
+    <section class="code">
+      &lt;button tabindex="1" class="no-focus-indicator"&gt; Is tabbable but has
+      no focus indicator &lt;/button&gt;
+    </section>
+    <section class="code">
+      &lt;button tabindex="3"&gt;And then this&lt;/button&gt;
+    </section>
+    <section class="code">
+      &lt;button tabindex="2"&gt;This will be focused first&lt;/button&gt;
+    </section>
+    <section class="code">
+      &lt;button (click)="openPopup('bad-example')"&gt;Open popup&lt;/button&gt;
+    </section>
+
+    <section class="content">
+      <button tabindex="-1">tab is disabled</button>
+      <button tabindex="1" class="no-focus-indicator">
+        Is tabbable but has no focus indicator
+      </button>
+      <button tabindex="3">And then this</button>
+      <button tabindex="2">This will be focused first</button>
+      <button (click)="openPopup('bad-example')">Open popup</button>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          The first button has a tabindex "-1", so the users won't be able to
+          focus on that button and the users with screen readers will not have
+          any chance to click that button
+        </li>
+        <li>
+          The second button is tabbable but has no visual indicator that it is
+          focused, so the user will be able to focus on that button but will not
+          see if it is focused
+        </li>
+        <li>
+          The third and fourth buttons have wrong tab indices, so the first one
+          which will get the focus will be the fourth one, and then the third
+          one
+        </li>
+        <li>
+          The auto focus on the popup element is disabled, so the user won't
+          know where the focus is
+        </li>
+        <li>
+          To avoid keyboard traps, do not disable closing the popup with the
+          escape button, or else users with reading disabilities won't be able
+          to close the popup with the keyboard
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+
+  <app-accessibility-example-container exampleType="good-example">
+    <section class="code">
+      &lt;button tabindex="2"&gt;This will be focused first&lt;/button&gt;
+    </section>
+    <section class="code">
+      &lt;button tabindex="3"&gt;And then this&lt;/button&gt;
+    </section>
+    <section class="code">
+      &lt;button (click)="openPopup('good-example')"&gt;Open
+      popup&lt;/button&gt;
+    </section>
+
+    <section class="content">
+      <button tabindex="2">This will be focused first</button>
+      <button tabindex="3">And then this</button>
+      <button (click)="openPopup('good-example')">Open popup</button>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          There should not be any button with tabindex -1 if it does not serve
+          some exceptional technical purpose in the application
+        </li>
+        <li>
+          There should not be any button without a visual indicator when it is
+          focused
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+</section>

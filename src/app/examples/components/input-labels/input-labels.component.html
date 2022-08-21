@@ -1,0 +1,59 @@
+<h1 class="title">Input Labels</h1>
+
+<section class="examples-container">
+  <app-accessibility-example-container exampleType="bad-example">
+    <section class="code">&lt;div>First Name&lt;/div&gt;</section>
+    <section class="code">&lt;input type="text" /&gt;</section>
+
+    <section class="content">
+      <div>First Name</div>
+      <input type="text" />
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          &lt;input&gt; element should not have other element than &lt;label&gt;
+          for the purpose of labeling, because assistive technologies like
+          screen readers won't be able to tell the input's label
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+
+  <app-accessibility-example-container exampleType="good-example">
+    <section class="code">
+      &lt;label for="first-name">First Name&lt;/label&gt;
+    </section>
+    <section class="code">&lt;input id="first-name" type="text" /&gt;</section>
+    <section class="code">&lt;br /&gt;</section>
+    <section class="code">
+      &lt;label class="last-name" &gt;Last Name &lt;input type="text" /&gt;
+      &lt;/label&gt;
+    </section>
+
+    <section class="content">
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" />
+      <br />
+      <label class="last-name"
+        >Last Name
+        <input type="text" />
+      </label>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          Assistive technologies like screen readers can read the label out loud
+          when the user is focused on the input
+        </li>
+        <li>
+          The &lt;label&gt; element must have `for` attribute set to the id of
+          the input element to link them together, or you can place the input
+          element into the label tag
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+</section>

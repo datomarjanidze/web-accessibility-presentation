@@ -1,0 +1,27 @@
+@use "src/styles/colors.scss" as colors;
+
+app-accessibility-example-container {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 50px;
+    padding: 15px;
+
+    font-size: 25px;
+    background-color: colors.$black-100;
+  }
+
+  &[exampleType="bad-example"] {
+    .content {
+      color: colors.$grey-86;
+    }
+  }
+
+  &[exampleType="good-example"] {
+    .content {
+      color: colors.$white-100;
+    }
+  }
+}

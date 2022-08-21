@@ -1,0 +1,63 @@
+<h1 class="title">Image Alt Text</h1>
+
+<section class="examples-container">
+  <app-accessibility-example-container exampleType="bad-example">
+    <section class="code">
+      &lt;img src="/assets/images/flatiron-building.jpg" /&gt;
+    </section>
+
+    <section class="content">
+      <img src="/assets/images/flatiron-building.jpg" />
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          A visually impaired person won't be able to understand purpose of an
+          image
+        </li>
+        <li>
+          If an image can not be loaded for some reason, for example network
+          error or link rots, user will not be able to understand purpose of an
+          image
+        </li>
+        <li>
+          SEO won't understand what the image is about, so it may effect the
+          ranking of the site
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+
+  <app-accessibility-example-container exampleType="good-example">
+    <section class="code">
+      &lt;img src="/assets/images/flatiron-building.jpg" alt="Aerial view of a
+      flatiron building" /&gt;
+    </section>
+
+    <section class="content">
+      <img
+        src="/assets/images/flatiron-building.jpg"
+        alt="Aerial view of a flatiron building"
+      />
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          A visually impaired person will be able to understand the purpose of
+          an image with a screen reader
+        </li>
+        <li>
+          If an image can not be loaded for some reason, for example network
+          error or link rots, user will be able to understand the purpose of an
+          image
+        </li>
+        <li>
+          SEO will understand what the image is about, so it may positively
+          effect the ranking of the site
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+</section>

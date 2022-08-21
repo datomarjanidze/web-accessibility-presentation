@@ -1,0 +1,12 @@
+<nav role="navigation" aria-label="Top navigation">
+  <a
+    mat-raised-button
+    color="white"
+    target="_blank"
+    *ngFor="let path of paths"
+    [routerLink]="pathToRouterLinkMappings[path]"
+    [attr.aria-label]="pathToAriaLabelMappings[path]"
+  >
+    {{ pathToAriaLabelMappings[path] }}
+  </a>
+</nav>

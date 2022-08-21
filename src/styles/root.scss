@@ -1,0 +1,13 @@
+@use "src/styles/colors.scss" as colors;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  background-color: colors.$black-3;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

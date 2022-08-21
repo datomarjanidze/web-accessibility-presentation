@@ -1,0 +1,13 @@
+@use "src/styles/buttons";
+
+button {
+  @extend %common-button;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &.no-focus-indicator {
+    background: none !important;
+  }
+}

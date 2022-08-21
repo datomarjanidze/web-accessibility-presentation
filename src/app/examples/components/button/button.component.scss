@@ -1,0 +1,7 @@
+@use "src/styles/buttons.scss";
+
+.button,
+button {
+  @extend %common-button;
+  display: inline-flex;
+}

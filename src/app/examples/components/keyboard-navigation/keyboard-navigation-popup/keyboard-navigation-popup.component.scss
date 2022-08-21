@@ -1,0 +1,23 @@
+@use "src/styles/buttons.scss";
+
+:host {
+  position: relative;
+  display: block;
+}
+
+button {
+  @extend %common-button;
+  position: absolute;
+  min-width: 40px;
+  padding: 0;
+  top: 0;
+  right: 0;
+
+  mat-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 19px;
+  }
+}

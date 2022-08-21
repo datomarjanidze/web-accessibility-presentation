@@ -1,0 +1,62 @@
+<h1 class="title">Headings</h1>
+
+<section class="examples-container">
+  <app-accessibility-example-container exampleType="bad-example">
+    <section class="code">&lt;p class="heading"&gt;Heading&lt;/p&gt;</section>
+    <section class="code">&lt;p class="body"&gt;...&lt;/p&gt;</section>
+
+    <section class="content">
+      <p class="heading">Heading</p>
+      <p class="body">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo
+      </p>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          Screen assistive technology won't interpret a paragraph as a heading,
+          and a person with reading disabilities has to examine all the text
+          instead of quickly scanning a page
+        </li>
+        <li>
+          SEO won't guess where the heading is and that may have a bad influence
+          on how your site is ranked
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+
+  <app-accessibility-example-container exampleType="good-example">
+    <section class="code">&lt;h1&gt;Heading&lt;/h1&gt;</section>
+    <section class="code">&lt;p class="body"&gt;...&lt;/p&gt;</section>
+
+    <section class="content">
+      <h1>Heading</h1>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo
+      </p>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          A person with a visual impairment will quickly read the headings with
+          a screen reader to get an idea of a text
+        </li>
+        <li>
+          SEO will correctly guess where the heading is and that will more
+          likely have a positive influence on how your site is ranked
+        </li>
+        <li>
+          Also, it will be a bad practice to use a heading element just for the
+          purpose of a bigger font size, where the heading is not intended.
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+</section>

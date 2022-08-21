@@ -1,0 +1,59 @@
+<h1 class="title">Buttons</h1>
+
+<section class="examples-container">
+  <app-accessibility-example-container exampleType="bad-example">
+    <section class="code">
+      &lt;div class="button"&gt;Button with div element&lt;/div&gt;
+    </section>
+
+    <section class="content">
+      <div class="button">Button with div element</div>
+      <div class="button">Button with div element</div>
+      <div class="button">Button with div element</div>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>Is not tabbable</li>
+        <li>&lt;div&gt; is not a semantic HTML element</li>
+        <li>Screen readers will not guess if it is a button</li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+
+  <app-accessibility-example-container exampleType="good-example">
+    <section class="code">
+      &lt;button aria-label="Native button element example"&gt;Native button
+      element&lt;/button&gt;
+    </section>
+
+    <section class="content">
+      <button aria-label="Native button element example">
+        Native button element
+      </button>
+      <button aria-label="Native button element example">
+        Native button element
+      </button>
+      <button aria-label="Native button element example">
+        Native button element
+      </button>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          It is tabbable, so the user can focus on the buttons by pressing the
+          tab
+        </li>
+        <li>
+          The &lt;button&gt; tag is a semantic HTML element, thus is more
+          understandable for developers and SEO
+        </li>
+        <li>
+          Screen readers will guess it is a button because they use semantic
+          HTML for the analysis
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+</section>

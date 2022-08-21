@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  & > h1.title {
+    text-align: center;
+    margin: 17px 0;
+    font-size: 26px;
+  }
+
+  .examples-container {
+    display: flex;
+    flex-direction: row;
+  }
+}

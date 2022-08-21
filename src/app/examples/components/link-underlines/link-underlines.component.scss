@@ -1,0 +1,17 @@
+@use "src/styles/colors" as colors;
+
+app-accessibility-example-container {
+  .content p {
+    font-size: 17px;
+  }
+
+  &[exampleType="bad-example"] {
+    .content p a {
+      text-decoration: none;
+    }
+  }
+
+  .content p a {
+    color: colors.$green-58;
+  }
+}

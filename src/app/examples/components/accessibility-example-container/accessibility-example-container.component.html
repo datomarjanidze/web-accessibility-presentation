@@ -1,0 +1,23 @@
+<section class="mat-icon-wrapper" [ngClass]="exampleType">
+  <mat-icon
+    *ngIf="exampleType === 'good-example'; else badExampleIcon"
+    aria-label="Good example icon"
+    fontIcon="done"
+  ></mat-icon>
+  <ng-template #badExampleIcon>
+    <mat-icon aria-label="Bad example icon" fontIcon="close"></mat-icon>
+  </ng-template>
+</section>
+
+<section class="code">
+  <ng-content select=".code"></ng-content>
+</section>
+
+<section class="content">
+  <ng-content select=".content"></ng-content>
+</section>
+
+<section class="pros-and-cons">
+  <h3>Pros & Cons</h3>
+  <ng-content select=".pros-and-cons"></ng-content>
+</section>

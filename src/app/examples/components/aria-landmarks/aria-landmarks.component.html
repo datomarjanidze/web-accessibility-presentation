@@ -1,0 +1,47 @@
+<h1 class="title">Aria Landmarks</h1>
+
+<section class="examples-container">
+  <app-accessibility-example-container exampleType="bad-example">
+    <section class="code">
+      &lt;button&gt; &lt;mat-icon fontIcon="close"&gt;&lt;/mat-icon&gt;
+      &lt;/button&gt;
+    </section>
+
+    <section class="content">
+      <button>
+        <mat-icon fontIcon="close"></mat-icon>
+      </button>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          Users with the screen reader technology won't be able to identify what
+          this button does
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+
+  <app-accessibility-example-container exampleType="good-example">
+    <section class="code">
+      &lt;button aria-label="Close popup"&gt; &lt;mat-icon
+      fontIcon="close"&gt;&lt;/mat-icon&gt; &lt;/button&gt;
+    </section>
+
+    <section class="content">
+      <button aria-label="Close popup">
+        <mat-icon fontIcon="close"></mat-icon>
+      </button>
+    </section>
+
+    <section class="pros-and-cons">
+      <ol>
+        <li>
+          `aria-label` attribute gives additional information to the assistive
+          technologies about its purpose
+        </li>
+      </ol>
+    </section>
+  </app-accessibility-example-container>
+</section>

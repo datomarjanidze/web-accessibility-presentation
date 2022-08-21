@@ -1,0 +1,11 @@
+@use "src/styles/buttons.scss";
+
+button {
+  @extend %common-button;
+  min-width: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
