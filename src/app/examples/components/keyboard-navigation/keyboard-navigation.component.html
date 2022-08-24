@@ -16,7 +16,8 @@
       &lt;button tabindex="2"&gt;This will be focused first&lt;/button&gt;
     </section>
     <section class="code">
-      &lt;button (click)="openPopup('bad-example')"&gt;Open popup&lt;/button&gt;
+      &lt;button tabindex="4" (click)="openPopup('bad-example')"&gt;Open
+      popup&lt;/button&gt;
     </section>
 
     <section class="content">
@@ -26,7 +27,9 @@
       </button>
       <button tabindex="3">And then this</button>
       <button tabindex="2">This will be focused first</button>
-      <button (click)="openPopup('bad-example')">Open popup</button>
+      <button tabindex="4" (click)="openPopup('bad-example')">
+        Open popup
+      </button>
     </section>
 
     <section class="pros-and-cons">
@@ -61,20 +64,22 @@
 
   <app-accessibility-example-container exampleType="good-example">
     <section class="code">
-      &lt;button tabindex="2"&gt;This will be focused first&lt;/button&gt;
+      &lt;button tabindex="5"&gt;This will be focused first&lt;/button&gt;
     </section>
     <section class="code">
-      &lt;button tabindex="3"&gt;And then this&lt;/button&gt;
+      &lt;button tabindex="6"&gt;And then this&lt;/button&gt;
     </section>
     <section class="code">
-      &lt;button (click)="openPopup('good-example')"&gt;Open
+      &lt;button tabindex="7" (click)="openPopup('good-example')"&gt;Open
       popup&lt;/button&gt;
     </section>
 
     <section class="content">
-      <button tabindex="2">This will be focused first</button>
-      <button tabindex="3">And then this</button>
-      <button (click)="openPopup('good-example')">Open popup</button>
+      <button tabindex="5">This will be focused first</button>
+      <button tabindex="6">And then this</button>
+      <button tabindex="7" (click)="openPopup('good-example')">
+        Open popup
+      </button>
     </section>
 
     <section class="pros-and-cons">
